@@ -1,26 +1,35 @@
-# Detection-Transformer
+🎯 Custom Object Detection using DETR (DEtection TRansformer)
+This repository demonstrates how to fine-tune Facebook AI’s DEtection TRansformer (DETR) for custom object detection tasks using PyTorch and Hugging Face's transformers library.
 
-Custom object detection Using Detection Transformer (DETR) .
+DETR combines a CNN backbone with a Transformer encoder-decoder to directly predict object bounding boxes and labels in an end-to-end fashion—no need for anchors, NMS, or hand-crafted pipelines.
 
-To understand the code, check this video: https://youtu.be/xuh37qziXnw
+📌 Highlights
+✅ Fine-tuning DETR on a custom dataset
 
-Requirements:
+✅ Supports PyTorch Lightning for cleaner training loops
 
-!python -m pip install --upgrade pip
+✅ Implements data augmentation & preprocessing using supervision
 
-!pip install supervision==0.3.0
+✅ Inspired by the Balloon dataset fine-tuning example
 
-!pip install transformers
+✅ Fully customizable for your own dataset
 
-!pip install pytorch-lightning
+🛠️ Installation & Setup
+Make sure to have Python 3.7+ installed. You can install all required packages using the following commands:
 
-!pip install timm
+bash
+复制
+编辑
+python -m pip install --upgrade pip
 
-!pip install cython
+pip install supervision==0.3.0
+pip install transformers
+pip install pytorch-lightning
+pip install timm
+pip install cython
+pip install pycocotools
+pip install scipy
 
-!pip install pycocotools
-
-!pip install scipy
 
 ![image](https://github.com/AarohiSingla/Detection-Transformer/assets/60029146/363726ba-01d0-4856-80a7-f5adc103ee7e)
 
@@ -30,8 +39,20 @@ Requirements:
 
 
 
-Reference: https://github.com/NielsRogge/Transformers-Tutorials/blob/master/DETR/Fine_tuning_DetrForObjectDetection_on_custom_dataset_(balloon).ipynb
+📖 Recommended Reading
+Original DETR Paper (2020)
+End-to-End Object Detection with Transformers
+📄 https://arxiv.org/abs/2005.12872
 
-Original DETR paper: https://arxiv.org/abs/2005.12872
+Official Facebook DETR GitHub
+🔗 https://github.com/facebookresearch/detr
+📊 Results & Evaluation
+Add your model performance here (example):
 
-Original DETR repo: https://github.com/facebookresearch/detr
+mAP: 0.71 @ IoU=0.5
+
+Epochs: 50
+
+Dataset: Custom (e.g., Balloon, or replace with your own)
+
+Hardware: NVIDIA RTX 3090
